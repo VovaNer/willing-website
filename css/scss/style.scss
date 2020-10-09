@@ -485,16 +485,16 @@ a:visited {
 .products {
   padding: 100px 0;
 
-  .slider-wrapper {
-    position: relative;
-
     .slider {
       padding: 50px 0;
-      overflow: hidden;
+      // overflow: hidden;
+      width: 100%;
+      position: relative;
 
       .slider__inner {
         display: flex;
-        // justify-content: space-around;
+        justify-content: space-around;
+        width: 100%;
         transition: all 0.6s ease;
 
         .slider__box {
@@ -503,8 +503,13 @@ a:visited {
           box-sizing: border-box;
           border-radius: 5px;
           box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
-          margin: 0 20px;
-          width: 20%;
+          margin-left: 20px;
+          transition: all 0.6s ease;
+          min-height: 500px;
+
+          &:first-child {
+            margin-left: 0;
+          }
 
           .slider__box-icon {
             background: url("../img/triangle.png") center center no-repeat;
@@ -528,7 +533,7 @@ a:visited {
           }
         }
       }
-    }
+    
     .slider__btn {
       position: absolute;
       top: 50%;
@@ -537,12 +542,13 @@ a:visited {
       height: 40px;
       cursor: pointer;
     }
+  
 
-    // .slider__next {
-    //   right: -50px;
-    //   background: url("../img/next.png") center center no-repeat;
-    //   z-index: 1;
-    // }
+    .slider__next {
+      right: -50px;
+      background: url("../img/next.png") center center no-repeat;
+      z-index: 1;
+    }
 
     .slider__prev {
       left: -50px;
@@ -551,6 +557,7 @@ a:visited {
     }
   }
 }
+
 
 .section__title {
   text-align: center;
@@ -563,7 +570,70 @@ a:visited {
     margin: 40px auto 0;
   }
 }
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+@keyframes fade {
+  from {transform: translateX(0%); opacity: 1;}
+  to {transform: translateX(-100%); opacity: 0;}
+}
+
+// Start of Our Products Section Medias
+@media screen and (max-width: 767px) {
+  .products {
+    .slider {
+      // .slider__btn {
+      //   position: absolute;
+      //   top: 50%;
+      //   transform: translateY(-50%);
+      //   width: 15px;
+      //   height: 30px;
+      //   cursor: pointer;
+      // }
+
+      .slider__next {
+        right: -30px;
+        background: url("../img/next.png") center center no-repeat;
+        z-index: 1;
+      }
+  
+      .slider__prev {
+        left: -30px;
+        background: url("../img/prev.png") center center no-repeat;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .products {
+    .slider {
+
+      .slider__next {
+        right: -20px;
+        background: url("../img/next.png") center center no-repeat;
+        z-index: 1;
+      }
+  
+      .slider__prev {
+        left: -20px;
+        background: url("../img/prev.png") center center no-repeat;
+        z-index: 1;
+      }
+    }
+  }
+}
+// End of Our Products Section Medias
 // End of Our Products Section
+
+
 
 // Start of Partners Section
 .partners {

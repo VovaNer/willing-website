@@ -301,43 +301,51 @@ a:visited {
       padding: 7px 10px; } }
 .products {
   padding: 100px 0; }
-  .products .slider-wrapper {
+  .products .slider {
+    padding: 50px 0;
+    width: 100%;
     position: relative; }
-    .products .slider-wrapper .slider {
-      padding: 50px 0;
-      overflow: hidden; }
-      .products .slider-wrapper .slider .slider__inner {
-        display: flex;
-        transition: all 0.6s ease; }
-        .products .slider-wrapper .slider .slider__inner .slider__box {
-          padding: 50px;
-          text-align: center;
-          box-sizing: border-box;
-          border-radius: 5px;
-          box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
-          margin: 0 20px;
-          width: 20%; }
-          .products .slider-wrapper .slider .slider__inner .slider__box .slider__box-icon {
-            background: url("../img/triangle.png") center center no-repeat;
-            background-size: contain; }
-          .products .slider-wrapper .slider .slider__inner .slider__box .slider__box-title,
-          .products .slider-wrapper .slider .slider__inner .slider__box .slider__box-link {
-            font-size: 22px;
-            font-weight: 700;
-            color: #4f4f4f; }
-          .products .slider-wrapper .slider .slider__inner .slider__box .slider__box-link {
-            color: #358baa;
-            transition: all 0.3s ease-in-out; }
-            .products .slider-wrapper .slider .slider__inner .slider__box .slider__box-link:hover {
-              color: #70d9ff; }
-    .products .slider-wrapper .slider__btn {
+    .products .slider .slider__inner {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      transition: all 0.6s ease; }
+      .products .slider .slider__inner .slider__box {
+        padding: 50px;
+        text-align: center;
+        box-sizing: border-box;
+        border-radius: 5px;
+        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
+        margin-left: 20px;
+        transition: all 0.6s ease;
+        min-height: 500px; }
+        .products .slider .slider__inner .slider__box:first-child {
+          margin-left: 0; }
+        .products .slider .slider__inner .slider__box .slider__box-icon {
+          background: url("../img/triangle.png") center center no-repeat;
+          background-size: contain; }
+        .products .slider .slider__inner .slider__box .slider__box-title,
+        .products .slider .slider__inner .slider__box .slider__box-link {
+          font-size: 22px;
+          font-weight: 700;
+          color: #4f4f4f; }
+        .products .slider .slider__inner .slider__box .slider__box-link {
+          color: #358baa;
+          transition: all 0.3s ease-in-out; }
+          .products .slider .slider__inner .slider__box .slider__box-link:hover {
+            color: #70d9ff; }
+    .products .slider .slider__btn {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       width: 25px;
       height: 40px;
       cursor: pointer; }
-    .products .slider-wrapper .slider__prev {
+    .products .slider .slider__next {
+      right: -50px;
+      background: url("../img/next.png") center center no-repeat;
+      z-index: 1; }
+    .products .slider .slider__prev {
       left: -50px;
       background: url("../img/prev.png") center center no-repeat;
       z-index: 1; }
@@ -351,6 +359,37 @@ a:visited {
     background-color: #808285;
     margin: 40px auto 0; }
 
+.hide {
+  display: none; }
+
+.show {
+  display: block; }
+
+@keyframes fade {
+  from {
+    transform: translateX(0%);
+    opacity: 1; }
+  to {
+    transform: translateX(-100%);
+    opacity: 0; } }
+@media screen and (max-width: 767px) {
+  .products .slider .slider__next {
+    right: -30px;
+    background: url("../img/next.png") center center no-repeat;
+    z-index: 1; }
+  .products .slider .slider__prev {
+    left: -30px;
+    background: url("../img/prev.png") center center no-repeat;
+    z-index: 1; } }
+@media screen and (max-width: 575px) {
+  .products .slider .slider__next {
+    right: -20px;
+    background: url("../img/next.png") center center no-repeat;
+    z-index: 1; }
+  .products .slider .slider__prev {
+    left: -20px;
+    background: url("../img/prev.png") center center no-repeat;
+    z-index: 1; } }
 .partners .partners__line {
   padding: 100px 0;
   display: flex;
