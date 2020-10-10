@@ -498,14 +498,14 @@ a:visited {
         transition: all 0.6s ease;
 
         .slider__box {
-          padding: 50px;
+          padding: 40px;
           text-align: center;
           box-sizing: border-box;
           border-radius: 5px;
           box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
           margin-left: 20px;
           transition: all 0.6s ease;
-          min-height: 500px;
+          min-height: 450px;
 
           &:first-child {
             margin-left: 0;
@@ -513,14 +513,29 @@ a:visited {
 
           .slider__box-icon {
             background: url("../img/triangle.png") center center no-repeat;
-            background-size: contain;
+            // background-size: contain;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+              max-width: 100%;
+              max-height: 100%;
+              display: block;
+            }
           }
 
           .slider__box-title,
           .slider__box-link {
-            font-size: 22px;
             font-weight: 700;
             color: #4f4f4f;
+            font-size: 18px;
+          }
+
+          .slider__box-text {
+            font-size: 16px;
+            margin: 40px 0;
           }
 
           .slider__box-link {
@@ -579,22 +594,12 @@ a:visited {
   display: block;
 }
 
-@keyframes fade {
-  from {transform: translateX(0%); opacity: 1;}
-  to {transform: translateX(-100%); opacity: 0;}
-}
-
 // Start of Our Products Section Medias
 @media screen and (max-width: 767px) {
   .products {
     .slider {
-      // .slider__btn {
-      //   position: absolute;
-      //   top: 50%;
-      //   transform: translateY(-50%);
-      //   width: 15px;
-      //   height: 30px;
-      //   cursor: pointer;
+      // .slider__title {
+
       // }
 
       .slider__next {

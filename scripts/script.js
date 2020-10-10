@@ -78,7 +78,6 @@ function formSlides(start = 0, end = slideItems) {
 function start() {
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.width = (sliderWidth - (slidesMargin * (slideItems-1))) / slideItems + 'px';
-        console.log(sliderWidth);
     }
     
 }
@@ -100,8 +99,6 @@ function slideNext() {
         slides[prevSlides].classList.remove('show');
         slides[slideCounter].classList.add('show');
         slides[slideCounter].classList.remove('hide');
-        console.log(slideCounter);
-        console.log(prevSlides);
         slideCounter++;
         prevSlides++;
     }
@@ -116,8 +113,6 @@ function slidePrev() {
         formSlides(slides.length-slideItems, slides.length);
         slideCounter = slides.length;
         prevSlides = slides.length - slideItems;
-        console.log(slideCounter);
-        console.log(prevSlides);
     } else {
         for (let i = 1; i < slides.length; i++) {
             slides[i].style.margin = '0';
@@ -126,8 +121,6 @@ function slidePrev() {
         slides[slideCounter-1].classList.remove('show');
         slides[prevSlides - 1].classList.add('show');
         slides[prevSlides - 1].classList.remove('hide');
-        console.log(slideCounter);
-        console.log(prevSlides);
         slideCounter--;
         prevSlides--;
     }
