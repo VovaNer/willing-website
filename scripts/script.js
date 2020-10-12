@@ -16,33 +16,6 @@ menuHide.addEventListener('click', () => {
     menuBlock.classList.remove('menu-show');
 });
 
-// let slideIndex = 1;
-// let offset = 0;
-
-// slidesInner.style.width = 25 * slides.length + '%';
-
-// sliderNext.addEventListener('click', () => {
-//     console.log(offset);
-//     if (offset == (+width.slice(0, width.length - 2) / 4) * (slides.length - 1 - 4)) {
-//         offset = 0;
-//     } else {
-//         offset += +width.slice(0, width.length - 2) / 4;
-//     }
-
-//     slidesInner.style.transform = `translateX(-${offset}px)`;
-// });
-
-// sliderPrev.addEventListener('click', () => {
-//     console.log(offset);
-//     if (offset == 0) {
-//         offset = (+width.slice(0, width.length - 2) / 4) * (slides.length - 1 - 4);
-//     } else {
-//         offset -= +width.slice(0, width.length - 2) / 4;
-//     }
-
-//     slidesInner.style.transform = `translateX(-${offset}px)`;
-// });
-
 let slideItems = 0;
 let slidesMargin = 20;
 let slideCounter = 0;
